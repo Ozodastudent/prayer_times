@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Prayer Times</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header_inner">
+          <a href="#" class="logo text-decoration-none"
+            >Islamic Prayer Times : <span class="current_region"></span
+          ></a>
+          <div class="current_card">
+            <p class="current_day"></p>
+            <time class="current_date"></time>
+            <time class="current_time ms-5"></time>
+            <form class="form">
+              <select name="select item" class="select_region form-select">
+                <option value="toshkent" selected>Toshkent</option>
+                <option value="andijon">Andijon</option>
+                <option value="buxoro">Buxoro</option>
+                <option value="farg'ona">Farg'ona</option>
+                <option value="sirdaryo">Sirdaryo</option>
+                <option value="namangan">Namangan</option>
+                <option value="qashqadaryo">Qashqadaryo</option>
+                <option value="surxandaryo">Surxandaryo</option>
+                <option value="navoiy">Navoiy</option>
+                <option value="samarqand">Samarqand</option>
+                <option value="jizzax">Jizzax</option>
+                <option value="xorazm">Xorazm</option>
+                <option value="nukus">Nukus</option>
+              </select>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="container">
+          <div class="hero_inner">
+            <div class="prayer_cards mb-5 mt-4">
+              <ul
+                class="prayer_list list-unstyled d-flex justify-content-between"
+              >
+                <li class="prayer_list_item shadow">
+                  <h5 class="prayer_list_title">Fajr</h5>
+                  <time class="prayer_list_time_fajr"></time>
+                </li>
+                <li class="prayer_list_item shadow">
+                  <h5 class="prayer_list_title">Sunrise</h5>
+                  <time class="prayer_list_time_sun"></time>
+                </li>
+                <li class="prayer_list_item shadow">
+                  <h5 class="prayer_list_title">Duhr</h5>
+                  <time class="prayer_list_time_duhr"></time>
+                </li>
+                <li class="prayer_list_item shadow">
+                  <h5 class="prayer_list_title">Asr</h5>
+                  <time class="prayer_list_time_asr"></time>
+                </li>
+                <li class="prayer_list_item shadow">
+                  <h5 class="prayer_list_title">Maghrib</h5>
+                  <time class="prayer_list_time_maghrib"></time>
+                </li>
+                <li class="prayer_list_item shadow">
+                  <h5 class="prayer_list_title">Isha</h5>
+                  <time class="prayer_list_time_isha"></time>
+                </li>
+              </ul>
+            </div>
+            <div class="weekly_part">
+              <div class="weekly_title_card shadow">
+                <h4 class="weekly_title">
+                  Weekly Prayer Times in
+                  <span class="weekly_region">Tashkent</span>
+                </h4>
+              </div>
+              <table class="weekly_table">
+                <tr>
+                  <th class="weekly_week">Week</th>
+                  <th class="weekly_date">Date</th>
+                  <th class="weekly_fajr">Fajr</th>
+                  <th class="weekly_duhr">Duhr</th>
+                  <th class="weekly_asr">Asr</th>
+                  <th class="weekly_maghrib">Maghrib</th>
+                  <th class="weekly_isha">Isha</th>
+                </tr>
+                <tbody class="weekly_data"></tbody>
+              </table>
+            </div>
+
+            <div class="monthly_part">
+              <div class="monthly_title_card shadow">
+                <h4 class="monthly_title">
+                  Monthly Prayer Times in
+                  <span class="monthly_region">Tashkent</span>
+                </h4>
+              </div>
+              <table class="monthly_table">
+                <tr>
+                  <th class="monthly_week">Week</th>
+                  <th class="monthly_date">Date</th>
+                  <th class="monthly_fajr">Fajr</th>
+                  <th class="monthly_duhr">Duhr</th>
+                  <th class="monthly_asr">Asr</th>
+                  <th class="monthly_maghrib">Maghrib</th>
+                  <th class="monthly_isha">Isha</th>
+                </tr>
+                <tbody class="monthly_data"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <template class="prayer_calendar_template">
+      <tr>
+        <td class="week_day_table"></td>
+        <td class="date_table"></td>
+        <td class="fajr_time_table"></td>
+        <td class="duhr_time_table"></td>
+        <td class="asr_time_table"></td>
+        <td class="maghrib_time_table"></td>
+        <td class="isha_time_table"></td>
+      </tr>
+    </template>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
